@@ -1,0 +1,357 @@
+/* Reset Settings*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    height: 10vh;
+}
+
+.navbar {
+    background: linear-gradient(135deg, #3c1f0f, #a64b2a, #1a0d07);
+}
+
+main {
+    background: linear-gradient(135deg, #3c1f0f, #a64b2a, #1a0d07);
+    color: #fff;
+}
+
+.container {
+    background: url('./Iphone.jpg') no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: overlay;
+}
+
+.container p {
+    color: #a64b2a;
+    text-shadow: 4px 4px 4px #000;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+/* From Uiverse.io by cssbuttons-io */
+/* ================== Show Phone Button ================== */
+.showButton {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.showButton.show-phones {
+    width: 12rem;
+    height: auto;
+}
+
+.showButton.show-phones .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #a64b2a;
+    border-radius: 1.625rem;
+}
+
+.showButton.show-phones .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+.showButton.show-phones .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+.showButton.show-phones .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+.showButton.show-phones .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #fff;
+    text-shadow: 4px 4px 4px #000;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.showButton:hover .circle {
+    width: 100%;
+}
+
+.showButton:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+
+.showButton:hover .button-text {
+    color: #fff;
+    text-shadow: 4px 4px 4px transparent;
+}
+
+/* ========== From Uiverse.io by mrhyddenn =====*/
+/* ================== Add Phone Button ================== */
+.icon-btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #cdcdcd;
+    background: #a0522d;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.2s ease-in-out;
+    font-weight: 500;
+    font-family: inherit;
+}
+
+.add-btn:hover {
+    width: 120px;
+}
+
+.add-btn::before,
+.add-btn::after {
+    transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 10px;
+    top: calc(50% - 2px);
+    background: #f8f9fa;
+}
+
+.add-btn::after {
+    right: 14px;
+    overflow: hidden;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.add-btn::before {
+    left: 14px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.icon-btn:focus {
+    outline: none;
+}
+
+.btn-txt {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.add-btn:hover::before,
+.add-btn:hover::after {
+    width: 4px;
+    border-radius: 2px;
+}
+
+.add-btn:hover .btn-txt {
+    opacity: 1;
+}
+
+.add-icon::after,
+.add-icon::before {
+    transition: all 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 2px;
+    top: calc(50% - 10px);
+    background: #f8f9fa;
+    overflow: hidden;
+}
+
+.add-icon::before {
+    left: 22px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.add-icon::after {
+    right: 22px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.add-btn:hover .add-icon::before {
+    left: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+}
+
+.add-btn:hover .add-icon::after {
+    right: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+}
+
+/* ================== Delete Phone Button ================== */
+.button {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #a0522d;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+    gap: 1px;
+}
+
+.svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+
+.svgIcon path {
+    fill: #a0522d;
+}
+
+.button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: #f8f9fa;
+    align-items: center;
+    gap: 0;
+}
+
+.button:hover .bin-bottom {
+    width: 50px;
+    transition-duration: 0.3s;
+    transform: translateY(60%);
+}
+
+.bin-top {
+    transform-origin: bottom right;
+}
+
+.button:hover .bin-top {
+    width: 50px;
+    transition-duration: 0.3s;
+    transform: translateY(60%) rotate(160deg);
+}
+
+.button::before {
+    position: absolute;
+    top: -20px;
+    content: "Delete Phone";
+    color: #a0522d;
+    transition-duration: 0.3s;
+    font-size: 2px;
+}
+
+.button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(35px);
+    transition-duration: 0.3s;
+}
+
+
+/* ================== Edit Phone Button ================== */
+.edit-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #a0522d;
+    border: 1px solid #cdcdcd;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none !important;
+}
+
+.edit-svgIcon {
+    width: 17px;
+    transition-duration: 0.3s;
+}
+
+.edit-svgIcon path {
+    fill: white;
+}
+
+.edit-button:hover {
+    width: 120px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: #a0522d;
+    align-items: center;
+}
+
+.edit-button:hover .edit-svgIcon {
+    width: 20px;
+    transition-duration: 0.3s;
+    transform: translateY(60%);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.edit-button::before {
+    display: none;
+    content: "Edit Phone";
+    color: white;
+    transition-duration: 0.3s;
+    font-size: 2px;
+}
+
+.edit-button:hover::before {
+    display: block;
+    padding-right: 10px;
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(0px);
+    transition-duration: 0.3s;
+}
