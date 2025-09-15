@@ -22,14 +22,14 @@ function addPhone() {
         phones.push(nameOfPhone);
         prices.push(priceOfPhone);
         quantities.push(qntyOfPhone);
-        showPhones();
     }
+    showPhones();
 }
 
 // =============================== Delete Phone ===============================
 function deletePhone() {
     const indexOf = +prompt('Enter the index of the phone to delete:');
-    if (indexOf === -1) {
+    if (indexOf < 0) {
         alert("Phone not found");
     } else {
         phones.splice(indexOf, 1);
