@@ -35,8 +35,8 @@ function deletePhone() {
         phones.splice(indexOf, 1);
         prices.splice(indexOf, 1);
         quantities.splice(indexOf, 1);
-        showPhones();
     }
+    showPhones();
 }
 
 // =============================== Update Or Edit Phone ===============================
